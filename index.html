@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+  </head>
+  <body>
+
+    <div class="container">
+      <ul id="errors" class="errors"></ul>
+
+      <h1 id="no_comments" class="no_comments secondary">Press 'Analyze' to get started.</h1>
+      <h1 id="yes_comments" class="yes_comments secondary hidden">Comments:</h1>
+
+      <ol class="highlighting_controls">
+        <button id="analyze" class="analyze action">Analyze</button>
+        <li id="highlight_all" class="highlight_all hidden">
+          <button href="#" target="_self">Highlight All</button>
+        </li>
+        <li id="unhighlight_all" class="unhighlight_all hidden">
+          <button href="#" target="_self">Unhighlight</button>
+        </li>
+      </ol>
+
+      <?!= HtmlService.createHtmlOutputFromFile('_spinner').getContent(); ?>
+
+      <ol id="cards" class="cards hidden"></ol>
+    </div>
+
+    <?!= HtmlService.createHtmlOutputFromFile('_footer').getContent(); ?>
+
+    <link rel="stylesheet" href="https://ssl.gstatic.com/docs/script/css/add-ons1.css">
+    <?!= HtmlService.createHtmlOutputFromFile('index.css').getContent(); ?>
+    <?!= HtmlService.createHtmlOutputFromFile('spinner.css').getContent(); ?>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <?!= HtmlService.createHtmlOutputFromFile('ajax.js').getContent(); ?>
+    <?!= HtmlService.createHtmlOutputFromFile('Card.js').getContent(); ?>
+    <?!= HtmlService.createHtmlOutputFromFile('ui.js').getContent(); ?>
+    <?!= HtmlService.createHtmlOutputFromFile('index.js').getContent(); ?>
+
+  </body>
+</html>
