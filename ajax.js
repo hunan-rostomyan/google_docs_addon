@@ -3,7 +3,7 @@ var Ajax = (function(){
   return {
 
     // A helper for those methods that don't have
-  	// anything more interesting to report in cases of failure.
+    // anything more interesting to report in cases of failure.
     genericFailure: function(func_name) {
       console.log('Ajax error: ' + func_name);
     },
